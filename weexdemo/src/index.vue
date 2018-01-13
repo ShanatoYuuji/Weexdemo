@@ -1,5 +1,5 @@
 <template>
-  <div style="background-color: antiquewhite" >
+  <div id="root" style="background-color: antiquewhite" >
     <div class="topic">
       <text>1213</text>
       <text>1213</text>
@@ -12,14 +12,13 @@
         <image  :src="pic" class="pic"/>
     </div>
   </div>
+  <router-view></router-view>
   </div>
 </template>
 
-<style>
+<style scoped>
   .topic{display: flex;flex-direction: row;flex-wrap: nowrap;justify-content: space-between}
   .wrapper { align-items: center; margin-top: 120px; }
-  .title { padding-top:40px; padding-bottom: 40px; font-size: 48px; }
-  .logo { width: 360px; height: 156px; }
   .desc { padding-top: 20px; color:#888; font-size: 24px;}
   .divpic{width:720px;height:540px;padding: 10px 10px 10px 10px}
   .pic{width:100%;height:100%}

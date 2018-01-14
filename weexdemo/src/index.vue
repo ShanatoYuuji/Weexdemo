@@ -1,5 +1,5 @@
 <template>
-  <div id="root" style="background-color: antiquewhite" >
+  <scroller id="root" style="background-color: antiquewhite" >
     <div class="topic">
       <text>1213</text>
       <text>1213</text>
@@ -7,21 +7,21 @@
       <text>1213</text>
       <text>1213</text>
     </div>
-  <div class="wrapper" >
+  <router-view></router-view>
+  <!-- <div class="wrapper" >
     <div  v-for="pic in pics"  v-bind:key="pic" class="divpic">
         <image  :src="pic" class="pic"/>
     </div>
-  </div>
-  <router-view></router-view>
-  </div>
+  </div> -->
+  </scroller>
 </template>
 
 <style scoped>
   .topic{display: flex;flex-direction: row;flex-wrap: nowrap;justify-content: space-between}
   .wrapper { align-items: center; margin-top: 120px; }
   .desc { padding-top: 20px; color:#888; font-size: 24px;}
-  .divpic{width:620px;height:540px;padding: 10px 10px 10px 10px}
-  .pic{width:100%;height:100%}
+  .divpic{padding: 10px 10px 10px 10px}
+  .pic{width:620px;height:540px}
 </style>
 
 <script>

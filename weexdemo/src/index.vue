@@ -20,7 +20,7 @@
   .topic{display: flex;flex-direction: row;flex-wrap: nowrap;justify-content: space-between}
   .wrapper { align-items: center; margin-top: 120px; }
   .desc { padding-top: 20px; color:#888; font-size: 24px;}
-  .divpic{width:720px;height:540px;padding: 10px 10px 10px 10px}
+  .divpic{width:620px;height:540px;padding: 10px 10px 10px 10px}
   .pic{width:100%;height:100%}
 </style>
 
@@ -30,9 +30,9 @@
       logoUrl: 'http://img1.vued.vanthink.cn/vued08aa73a9ab65dcbd360ec54659ada97c.png',
       target: 'World',
       pics:[
-        "https://i.pximg.net/img-original/img/2018/01/06/15/31/10/66670348_p0.jpg",
-        "https://i.pximg.net/img-original/img/2017/12/24/03/49/50/66418392_p0.png",
-        "https://i.pximg.net/img-original/img/2017/12/24/00/05/36/66414575_p0.jpg"
+        "http://i2.bvimg.com/627877/ce370c8b3c8189be.jpg",
+        "http://i1.bvimg.com/627877/b96a19f08786e974.png",
+        "http://i2.bvimg.com/627877/a9aeca5dc7235606.jpg"
       ]
     },
     methods: {

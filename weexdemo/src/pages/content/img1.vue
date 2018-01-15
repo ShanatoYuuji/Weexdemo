@@ -10,7 +10,7 @@
         </div>
     </div>
 </template>
-<script>
+<script scoped>
     import WxcBtn from "weex-ui/packages/wxc-button"
     export default {
         components:{
@@ -36,13 +36,13 @@
     }   
 </script>
 
-<style>
+<style scoped>
   .wrapper { align-items: center; margin-top: 50px;text-align: center}
   .title { padding-bottom: 40px; font-size: 48px;display: inline-block; }
   .logo { width: 360px; height: 156px; }
   .desc { padding-top: 20px; color:#888; font-size: 24px;display: inline-block;}
   .divpic{padding: 10px 10px 10px 10px}
-  .pic{width:620px;height:540px}
+  .pic{width:490px;height:540px}
 </style>
 
 

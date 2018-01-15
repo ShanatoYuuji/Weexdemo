@@ -1,5 +1,6 @@
 <template>
-  <scroller id="root" style="background-color: antiquewhite" >
+  <div id="root">
+  <scroller  style="background-color: antiquewhite;" class="scrroot" >
     <div class="topic">
       <text>1213</text>
       <text>1213</text>
@@ -13,20 +14,67 @@
         <image  :src="pic" class="pic"/>
     </div>
   </div> -->
-  </scroller>
+   </scroller>
+  <div class="nav">
+      
+        <div  class="link">
+        <text class="title" @click.native="changepage(0)" :style="{color:page === 0?'#00BBE4':'gray'}">首页</text>
+        </div>
+     
+        <div  class="link">
+        <text class="title"  @click.native="updateimg" :style="{color:page === 1?'#00BBE4':'gray'}">分类</text>
+        </div>
+          
+        <div class="link">
+        <text class="title"  @click.native="updatehome" :style="{color:page === 2?'#00BBE4':'gray'}">我的</text>
+        </div>
+  </div>
+</div>
+ 
 </template>
 
-<style scoped>
+<style>
+  .scrroot{
+    height: 1100px;
+  }
   .topic{display: flex;flex-direction: row;flex-wrap: nowrap;justify-content: space-between}
-  .wrapper { align-items: center; margin-top: 120px; }
-  .desc { padding-top: 20px; color:#888; font-size: 24px;}
-  .divpic{padding: 10px 10px 10px 10px}
-  .pic{width:620px;height:540px}
+  .nav {
+      display: flex;
+      /* position: absolute; */
+      margin-top: 10px;
+      /* bottom: 1px; */
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      align-items: center;
+      height: 100px;
+      background-color:black
+  }
+  .link {
+    width: 162.5px;
+    flex-shrink: 1;
+    text-align: center;
+    margin:0 auto;
+    padding: 3px;
+    align-items: center;
+  }
+  .title {
+    font-size: 60px;
+    line-height: 65px;
+    text-align: center;
+    top: 5px;
+  }
+  .logo {
+    position: relative;
+    width: 45px;
+    height: 45px;
+  }
 </style>
 
-<script>
+<script >
   export default {
     data: {
+      page:0,
       logoUrl: 'http://img1.vued.vanthink.cn/vued08aa73a9ab65dcbd360ec54659ada97c.png',
       target: 'World',
       pics:[
@@ -39,6 +87,17 @@
       update: function (e) {
         this.target = 'Weex'
         console.log('target:', this.target)
+      },
+      changepage(page){
+        this.page=page
+      },
+      updateimg(e){
+          console.log('触发跳转路由事件')
+          this.$router.push({path:'/img1'})
+      },
+      updatehome(e){
+          console.log('触发跳转路由事件')
+          this.$router.push({path:'/'})
       }
     }
   }

@@ -8,7 +8,7 @@
         </div>
     </div>
 </template>
-<script>
+<script scoped>
     import WxcBtn from "weex-ui/packages/wxc-button"
     export default {
         components:{
@@ -29,7 +29,7 @@
     }   
 </script>
 
-<style>
+<style scoped>
   .wrapper { align-items: center; margin-top: 50px;text-align: center}
   .title { padding-bottom: 40px; font-size: 48px;display: inline-block; }
   .logo { width: 360px; height: 156px; }

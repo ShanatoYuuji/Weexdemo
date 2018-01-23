@@ -20,7 +20,7 @@ export const appRequire={
         return stream.fetch({
             method:'POST',
             type:'json',
-            headers:headers,
+            headers:header,
             body:sentData,
             url:apiUrl
         },callback)
